@@ -1,0 +1,46 @@
+{
+  "manifest_version": 3,
+  "name": "ITD42 Overlay Assistant",
+  "version": "1.0.0",
+  "description": "Визуальный overlay-ассистент для моих любимых сорок вторых.",
+  "permissions": [
+    "storage",
+    "tabs",
+    "activeTab",
+    "unlimitedStorage"
+  ],
+  "host_permissions": [
+    "https://pixel.xn--d1ah4a.com/*"
+  ],
+  "action": {
+    "default_title": "ITD42 Overlay",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://pixel.xn--d1ah4a.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_start"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "modules/colorUtils.js",
+        "modules/dockedPanel.js",
+        "modules/overlayRenderer.js",
+        "modules/pageHook.js",
+        "modules/siteAdapter.js",
+        "modules/storage.js",
+        "modules/templateLoader.js"
+      ],
+      "matches": [
+        "https://pixel.xn--d1ah4a.com/*"
+      ]
+    }
+  ]
+}

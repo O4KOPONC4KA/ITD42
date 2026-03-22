@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ITD42 Overlay</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-width: 260px;
+        background:
+          radial-gradient(circle at top right, rgba(89, 215, 167, 0.16), transparent 42%),
+          linear-gradient(160deg, #0c1117 0%, #151d28 48%, #0f151c 100%);
+        font: 13px/1.45 "Segoe UI", "Trebuchet MS", system-ui, sans-serif;
+      }
+
+      .shell {
+        padding: 14px;
+      }
+
+      button {
+        width: 100%;
+        border: 0;
+        border-radius: 13px;
+        padding: 11px 12px;
+        color: #07110d;
+        font: 700 13px/1 "Segoe UI", "Trebuchet MS", system-ui, sans-serif;
+        cursor: pointer;
+        background: linear-gradient(135deg, #59d7a7, #7fe0ff);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="shell">
+      <button id="openPanel" type="button">Открыть панель</button>
+    </div>
+
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>
